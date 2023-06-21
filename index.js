@@ -18,7 +18,7 @@ app.post('/sendemail', async (req, res) => {
     const msg = {
         to: req.body.email,
         from: "eventally.in@gmail.com",
-        subject: 'Mail from ' + req.body.name,
+        subject: req.body.subject,
         text: req.body.message,
         html: req.body.message,
     };
